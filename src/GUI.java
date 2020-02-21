@@ -19,6 +19,7 @@ public class GUI implements ActionListener {
     JButton palatine_keepstar_button;
     Astrahus astrahus;
     Fortizar fortizar;
+    Keepstar keepstar;
 
     public static void main(String[] args) {
         new GUI();
@@ -60,7 +61,8 @@ public class GUI implements ActionListener {
         palatine_keepstar_button.addActionListener(this);
         palatine_keepstar_button.setPreferredSize(new Dimension(400,30));
 
-        result_label = new JTextArea("Click on a citadel" + "\n" + "to see materials");
+        result_label = new JTextArea("Click on a citadel" + "to see materials" + "\n" +
+                "1. Minerals" + "\n" + "2. P4 products" + "\n" + "3. or P2 products");
         result_label.setEditable(false);
         result_label.setBackground(null);
 
@@ -80,6 +82,7 @@ public class GUI implements ActionListener {
         window.validate();
         astrahus = new Astrahus();
         fortizar = new Fortizar();
+        keepstar = new Keepstar();
     }
 
     @Override
@@ -89,6 +92,9 @@ public class GUI implements ActionListener {
         }
         else if (e.getSource() == fortizar_button) {
             result_label.setText(fortizar.getMaterials());
+        }
+        else if (e.getSource() == keepstar_button) {
+            result_label.setText(keepstar.getMaterials());
         }
     }
 }
