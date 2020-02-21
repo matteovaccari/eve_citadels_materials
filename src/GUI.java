@@ -17,6 +17,8 @@ public class GUI implements ActionListener {
     JButton azbel_button;
     JButton sotiyo_button;
     JButton palatine_keepstar_button;
+    Astrahus astrahus;
+    Fortizar fortizar;
 
     public static void main(String[] args) {
         new GUI();
@@ -76,13 +78,17 @@ public class GUI implements ActionListener {
 
         window.add(panel);
         window.validate();
+        astrahus = new Astrahus();
+        fortizar = new Fortizar();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == athanor_button) {
-            //show athanor result
-            result_label.setText("ligne 1 athanor" + "\n" + "ligne 2 athanor");
+        if (e.getSource() == astrahus_button) {
+            result_label.setText(astrahus.getMaterials());
+        }
+        else if (e.getSource() == fortizar_button) {
+            result_label.setText(fortizar.getMaterials());
         }
     }
 }
