@@ -61,23 +61,23 @@ public class GUI implements ActionListener {
         window.setSize(500, 700);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        fortizar_image = ImageIO.read(new File("D:/programmes/WorkSpace_2/eve_citadel_materials/images/fortizar.jpg"));
+        fortizar_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/fortizar.jpg"));
         fortizar_picture = new JLabel(new ImageIcon(fortizar_image));
-        astrahus_image = ImageIO.read(new File("D:/programmes/WorkSpace_2/eve_citadel_materials/images/astrahus.jpg"));
+        astrahus_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/astrahus.jpg"));
         astrahus_picture = new JLabel(new ImageIcon(astrahus_image));
-        keepstar_image = ImageIO.read(new File("D:/programmes/WorkSpace_2/eve_citadel_materials/images/keepstar.jpg"));
+        keepstar_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/keepstar.jpg"));
         keepstar_picture = new JLabel(new ImageIcon(keepstar_image));
-        raitaru_image = ImageIO.read(new File("D:/programmes/WorkSpace_2/eve_citadel_materials/images/raitaru.jpg"));
+        raitaru_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/raitaru.jpg"));
         raitaru_picture = new JLabel(new ImageIcon(raitaru_image));
-        azbel_image = ImageIO.read(new File("D:/programmes/WorkSpace_2/eve_citadel_materials/images/azbel.jpg"));
+        azbel_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/azbel.jpg"));
         azbel_picture = new JLabel(new ImageIcon(azbel_image));
-        sotiyo_image = ImageIO.read(new File("D:/programmes/WorkSpace_2/eve_citadel_materials/images/sotiyo.jpg"));
+        sotiyo_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/sotiyo.jpg"));
         sotiyo_picture = new JLabel(new ImageIcon(sotiyo_image));
-        athanor_image = ImageIO.read(new File("D:/programmes/WorkSpace_2/eve_citadel_materials/images/athanor.jpg"));
+        athanor_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/athanor.jpg"));
         athanor_picture = new JLabel(new ImageIcon(athanor_image));
-        tatara_image = ImageIO.read(new File("D:/programmes/WorkSpace_2/eve_citadel_materials/images/tatara.jpg"));
+        tatara_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/tatara.jpg"));
         tatara_picture = new JLabel(new ImageIcon(tatara_image));
-        palatineKeepstar_image = ImageIO.read(new File("D:/programmes/WorkSpace_2/eve_citadel_materials/images/palatine_keepstar.jpg"));
+        palatineKeepstar_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/palatine_keepstar.jpg"));
         palatine_keepstar_picture = new JLabel(new ImageIcon(palatineKeepstar_image));
         panel = new JPanel();
 
