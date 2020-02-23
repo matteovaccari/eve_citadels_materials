@@ -5,7 +5,7 @@ public class Azbel {
                 + "\n" + "Megacyte x 12.150"  + "\n" + "\n" + "Broadcast Node x 196"
                 + "\n" + "Integrity Response Drones x 187" + "\n" + "Nano-Factory x 237"
                 + "\n" + "Organic Mortar Applicators x 222" + "\n" + "Recursive Computing Module x 189"
-                + "\n" + "Self-Harmonizing Power Core x 188" + "\n" + "Sterile Conduits x 223"
+                + "\n" + "Self-Harmonizing Power Core x 188  " + "\n" + "Sterile Conduits x 223"
                 + "\n" + "Wetware Mainframe x 174" + "\n" + "\n" + "Or those P2 materials :";
     }
 }

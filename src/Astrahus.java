@@ -6,7 +6,7 @@ public class Astrahus {
                 + "\n" + "Megacyte x 2.565"  + "\n" + "\n" + "Broadcast Node x 73"
                 + "\n" + "Integrity Response Drones x 20" + "\n" + "Nano-Factory x 54"
                 + "\n" + "Organic Mortar Applicators x 55" + "\n" + "Recursive Computing Module x 38"
-                + "\n" + "Self-Harmonizing Power Core x 38" + "\n" + "Sterile Conduits x 74"
+                + "\n" + "Self-Harmonizing Power Core x 38 " + "\n" + "Sterile Conduits x 74"
                 + "\n" + "Wetware Mainframe x 54" + "\n" + "\n" + "Or those P2 materials :";
     }
 

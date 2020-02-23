@@ -5,7 +5,7 @@ public class Athanor {
                 + "\n" + "Megacyte x 2.295"  + "\n" + "\n" + "Broadcast Node x 21"
                 + "\n" + "Integrity Response Drones x 40" + "\n" + "Nano-Factory x 41"
                 + "\n" + "Organic Mortar Applicators x 50" + "\n" + "Recursive Computing Module x 32"
-                + "\n" + "Self-Harmonizing Power Core x 64" + "\n" + "Sterile Conduits x 38"
+                + "\n" + "Self-Harmonizing Power Core x 64    " + "\n" + "Sterile Conduits x 38"
                 + "\n" + "Wetware Mainframe x 50" + "\n" + "\n" + "Or those P2 materials :";
     }
 }
