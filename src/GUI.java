@@ -1,14 +1,19 @@
+import org.json.JSONObject;
+
 import javax.imageio.ImageIO;
+import javax.net.ssl.HttpsURLConnection;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class GUI implements ActionListener {
 
+    //todo : add comments
     JFrame window;
     JPanel panel;
     JTextArea result_label;
@@ -50,6 +55,11 @@ public class GUI implements ActionListener {
     BufferedImage palatineKeepstar_image;
     JLabel current_picture;
     String current_picture_name = "empty";
+
+    private static HttpURLConnection con;
+    String url;
+    String urlParameters;
+    URL urlObject;
 
     public static void main(String[] args) throws IOException {
         new GUI();
@@ -137,6 +147,16 @@ public class GUI implements ActionListener {
         athanor = new Athanor();
         tatara = new Tatara();
         palatineKeepstar = new PalatineKeepstar();
+
+        //post request
+
+        con = (HttpsURLConnection) urlObject.openConnection();
+        //Request header
+        con.setRequestMethod("POST");
+        con.setRequestProperty("User-Agent", "Mozilla/5.0");
+
+
+
     }
 
     @Override
@@ -257,6 +277,29 @@ public class GUI implements ActionListener {
             }
             result_label.setText(palatineKeepstar.getMaterials());
         }
+    }
+
+    public String getAthanorUrlParameters(){
+        return "market=amarr&raw_textarea=1 x Athanor&persist=no&format=json";
+    }
+
+    public void sendAthanorPostRequest() throws IOException {
+        //Send post request
+        con.setDoOutput(true);
+        DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+        wr.writeBytes(getAthanorUrlParameters());
+        wr.flush();
+        wr.close();
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(con.getInputStream()));
+        String inputLine;
+        StringBuilder response = new StringBuilder();
+        while ((inputLine = in.readLine()) != null) {
+            response.append(inputLine);
+        }
+        in.close();
+        JSONObject jsonObject = new JSONObject(response.toString());
+        double sellPrice = jsonObject.getJSONObject("appraisal").getJSONObject("totals").getDouble("sell");
     }
 }
 

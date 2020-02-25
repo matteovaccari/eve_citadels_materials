@@ -1,5 +1,7 @@
 public class Athanor {
 
+    public static int estSellPrice;
+
     public String getMaterials() {
 
         return "Tritanium x 7.650.000" + "\n" + "Pyerite x 1.530.000" + "\n" + "Mexallon x 535.500"
