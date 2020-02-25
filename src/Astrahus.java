@@ -24,8 +24,15 @@ public class Astrahus {
                 + "\n" + "Miniature Electronics x 1880" + "  Water x 2960"
                 + "\n" + "Bacteria x 2200" + "  Reactive Metals x 2160" + "\n";
     }
+    public int getP4ESTprice() {
+        return 0;
+    }
 
-    public int getESTprice(int quantity) {
+    public int getP2ESTprice() {
+        return 0;
+    }
+
+    public int getMineralESTprice() {
         return 0;
     }
 

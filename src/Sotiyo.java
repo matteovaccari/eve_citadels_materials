@@ -22,4 +22,15 @@ public class Sotiyo {
                 + "\n" + "Miniature Electronics x 52520" + "  Water x 56160"
                 + "\n" + "Bacteria x 56120" + "  Reactive Metals x 74280" + "\n";
     }
+    public int getP4ESTprice() {
+        return 0;
+    }
+
+    public int getP2ESTprice() {
+        return 0;
+    }
+
+    public int getMineralESTprice() {
+        return 0;
+    }
 }

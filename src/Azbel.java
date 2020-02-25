@@ -22,4 +22,15 @@ public class Azbel {
                 + "\n" + "Miniature Electronics x 8200" + "  Water x 8920"
                 + "\n" + "Bacteria x 8880" + "  Reactive Metals x 9480" + "\n";
     }
+    public int getP4ESTprice() {
+        return 0;
+    }
+
+    public int getP2ESTprice() {
+        return 0;
+    }
+
+    public int getMineralESTprice() {
+        return 0;
+    }
 }

@@ -22,4 +22,15 @@ public class PalatineKeepstar {
                 + "\n" + "Miniature Electronics x 203.542.960" + "  Water x 203.542.960"
                 + "\n" + "Bacteria x 244.822.920" + "  Reactive Metals x 242.354.320" + "\n";
     }
+    public int getP4ESTprice() {
+        return 0;
+    }
+
+    public int getP2ESTprice() {
+        return 0;
+    }
+
+    public int getMineralESTprice() {
+        return 0;
+    }
 }

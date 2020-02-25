@@ -23,4 +23,15 @@ public class Keepstar {
                 + "\n" + "Miniature Electronics x 420100" + "  Water x 628720"
                 + "\n" + "Bacteria x 489640" + "  Reactive Metals x 484720" + "\n";
     }
+    public int getP4ESTprice() {
+        return 0;
+    }
+
+    public int getP2ESTprice() {
+        return 0;
+    }
+
+    public int getMineralESTprice() {
+        return 0;
+    }
 }

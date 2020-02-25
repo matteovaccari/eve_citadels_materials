@@ -22,4 +22,15 @@ public class Tatara {
                 + "\n" + "Miniature Electronics x 13520" + "  Water x 14360"
                 + "\n" + "Bacteria x 18240" + "  Reactive Metals x 14200" + "\n";
     }
+    public int getP4ESTprice() {
+        return 0;
+    }
+
+    public int getP2ESTprice() {
+        return 0;
+    }
+
+    public int getMineralESTprice() {
+        return 0;
+    }
 }

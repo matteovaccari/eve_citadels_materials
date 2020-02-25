@@ -22,4 +22,15 @@ public class Raitaru {
                 + "\n" + "Miniature Electronics x 1100" + "  Water x 1240"
                 + "\n" + "Bacteria x 1480" + "  Reactive Metals x 1480" + "\n";
     }
+    public int getP4ESTprice() {
+        return 0;
+    }
+
+    public int getP2ESTprice() {
+        return 0;
+    }
+
+    public int getMineralESTprice() {
+        return 0;
+    }
 }

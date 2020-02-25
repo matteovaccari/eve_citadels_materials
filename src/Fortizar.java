@@ -23,4 +23,15 @@ public class Fortizar {
                 + "\n" + "Miniature Electronics x 20820" + "  Water x 31320"
                 + "\n" + "Bacteria x 24320" + "  Reactive Metals x 23920" + "\n";
     }
+    public int getP4ESTprice() {
+        return 0;
+    }
+
+    public int getP2ESTprice() {
+        return 0;
+    }
+
+    public int getMineralESTprice() {
+        return 0;
+    }
 }
