@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a584f6d9-75f8-4666-947d-5e17238e8abc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Astrahus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Astrahus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Astrahus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Astrahus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Athanor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Athanor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Azbel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Azbel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Fortizar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Fortizar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Keepstar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Keepstar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/PalatineKeepstar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/PalatineKeepstar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Raitaru.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Raitaru.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Sotiyo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Sotiyo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Tatara.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Tatara.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Athanor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Athanor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Azbel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Azbel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fortizar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fortizar.java" afterDir="false" />
@@ -91,22 +101,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="531" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728@0.0.1366.728" timestamp="1582292811937" />
-    <state width="921" height="177" key="GridCell.Tab.0.bottom" timestamp="1582640690445">
+    <state width="921" height="177" key="GridCell.Tab.0.bottom" timestamp="1582642638448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="921" height="177" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582640690445" />
-    <state width="921" height="177" key="GridCell.Tab.0.center" timestamp="1582640690445">
+    <state width="921" height="177" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582642638448" />
+    <state width="921" height="177" key="GridCell.Tab.0.center" timestamp="1582642638448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="921" height="177" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582640690445" />
-    <state width="921" height="177" key="GridCell.Tab.0.left" timestamp="1582640690445">
+    <state width="921" height="177" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582642638448" />
+    <state width="921" height="177" key="GridCell.Tab.0.left" timestamp="1582642638443">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="921" height="177" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582640690445" />
-    <state width="921" height="177" key="GridCell.Tab.0.right" timestamp="1582640690445">
+    <state width="921" height="177" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582642638443" />
+    <state width="921" height="177" key="GridCell.Tab.0.right" timestamp="1582642638448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="921" height="177" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582640690445" />
+    <state width="921" height="177" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582642638448" />
     <state x="184" y="7" key="SettingsEditor" timestamp="1582292845868">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
