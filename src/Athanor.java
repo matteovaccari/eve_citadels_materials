@@ -4,12 +4,12 @@ public class Athanor {
 
         return "Tritanium x 7.650.000" + "\n" + "Pyerite x 1.530.000" + "\n" + "Mexallon x 535.500"
                 + "\n" + "Isogen x 61.200" + "\n" + "Nocxium x 11.475" + "\n" + "Zydrine x 5.355"
-                + "\n" + "Megacyte x 2.295" + "\n" + " --> Est.Price(Amarr) = " + getMineralESTprice() + "\n" + "\n"
+                + "\n" + "Megacyte x 2.295" + "\n" + " --> Est.Sell Price(Amarr) = " + getMineralESTprice() + "\n" + "\n"
                 + "Broadcast Node x 21"
                 + "\n" + "Integrity Response Drones x 40" + "\n" + "Nano-Factory x 41"
                 + "\n" + "Organic Mortar Applicators x 50" + "\n" + "Recursive Computing Module x 32"
                 + "\n" + "Self-Harmonizing Power Core x 64    " + "\n" + "Sterile Conduits x 38"
-                + "\n" + "Wetware Mainframe x 50" + "\n" + " --> Est.Price(Amarr) = " + getP4ESTprice() + "\n" + "\n"
+                + "\n" + "Wetware Mainframe x 50" + "\n" + " --> Est.Sell Price(Amarr) = " + getP4ESTprice() + "\n" + "\n"
                 + "Or those P2 materials :"
                 + "\n" + "Biocells x 1860" + "  Construction Blocks x 1760"
                 + "\n" + "Consumer Electronics x 2000" + "  Coolant x 2000"
@@ -25,7 +25,7 @@ public class Athanor {
                 + "\n" + "Viral Agent x 1560" + "  Water-Cooled CPU x 1640"
                 + "\n" + "Miniature Electronics x 1560" + "  Water x 1520"
                 + "\n" + "Bacteria x 2000" + "  Reactive Metals x 1640" + "\n"
-                + " --> Est.Price(Amarr) = " + getP2ESTprice();
+                + " --> Est.Sell Price(Amarr) = " + getP2ESTprice();
     }
 
     public int getP4ESTprice() {
