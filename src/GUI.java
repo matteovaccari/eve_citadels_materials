@@ -58,7 +58,7 @@ public class GUI implements ActionListener {
     public GUI() throws IOException {
         window = new JFrame("Eve citadels materials");
         window.setVisible(true);
-        window.setSize(700, 950);
+        window.setSize(620, 950);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         fortizar_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/fortizar.jpg"));
@@ -107,7 +107,7 @@ public class GUI implements ActionListener {
         tatara_button.setPreferredSize(new Dimension(150, 30));
         palatine_keepstar_button = new JButton("Palatine Keepstar");
         palatine_keepstar_button.addActionListener(this);
-        palatine_keepstar_button.setPreferredSize(new Dimension(400, 30));
+        palatine_keepstar_button.setPreferredSize(new Dimension(150, 30));
 
         result_label = new JTextArea("Click on a citadel" + "to see materials" + "\n" +
                 "1. Minerals" + "\n" + "2. P4 products" + "\n" + "3. or P2 products");
