@@ -58,7 +58,7 @@ public class GUI implements ActionListener {
     public GUI() throws IOException {
         window = new JFrame("Eve citadels materials");
         window.setVisible(true);
-        window.setSize(500, 950);
+        window.setSize(700, 950);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         fortizar_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/fortizar.jpg"));
