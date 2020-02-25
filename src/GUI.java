@@ -60,6 +60,7 @@ public class GUI implements ActionListener {
         window.setVisible(true);
         window.setSize(620, 950);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setResizable(false);
 
         fortizar_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/fortizar.jpg"));
         fortizar_picture = new JLabel(new ImageIcon(fortizar_image));
