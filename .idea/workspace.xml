@@ -3,11 +3,30 @@
   <component name="ChangeListManager">
     <list default="true" id="a584f6d9-75f8-4666-947d-5e17238e8abc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/eve_citadels_materials.iml" beforeDir="false" afterPath="$PROJECT_DIR$/eve_citadels_materials.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Astrahus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Astrahus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Athanor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Athanor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Azbel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Azbel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Fortizar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Fortizar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Keepstar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Keepstar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/PalatineKeepstar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/PalatineKeepstar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Raitaru.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Raitaru.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Sotiyo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Sotiyo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eve_citadels_materials/Tatara.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eve_citadels_materials/Tatara.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Athanor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Athanor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Azbel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Azbel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fortizar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fortizar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Keepstar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Keepstar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PalatineKeepstar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PalatineKeepstar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Raitaru.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Raitaru.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sotiyo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sotiyo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tatara.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tatara.java" afterDir="false" />
+>>>>>>> 16431111e2db911d195989226529437b8872043b
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +38,7 @@
   <component name="CoverageViewManager">
     <option name="myElementSize" value="119" />
   </component>
+<<<<<<< HEAD
   <component name="FUSProjectUsageTrigger">
     <session id="-1734487907">
       <usages-collector id="statistics.file.extensions.edit">
@@ -141,6 +161,8 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> 16431111e2db911d195989226529437b8872043b
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -151,6 +173,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -197,6 +220,11 @@
         </subPane>
       </pane>
     </panes>
+=======
+  <component name="ProjectId" id="1Y7TY5g0MRd1PQfABDPey9Qaieo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+>>>>>>> 16431111e2db911d195989226529437b8872043b
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -204,6 +232,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
@@ -212,19 +241,14 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582424862812" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../WorkSpace/eve_pi" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+>>>>>>> 16431111e2db911d195989226529437b8872043b
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -253,6 +277,7 @@
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="960" height="1080" extended-state="0" />
     <editor active="true" />
@@ -289,37 +314,44 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+=======
+>>>>>>> 16431111e2db911d195989226529437b8872043b
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="23" key="#Project_Structure" timestamp="1582562377174">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="23" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1582562377174" />
     <state x="531" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1582292811937">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="531" y="254" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728@0.0.1366.728" timestamp="1582292811937" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1582300634842">
+    <state width="921" height="177" key="GridCell.Tab.0.bottom" timestamp="1582642638448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582300634842" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1582300634842">
+    <state width="921" height="177" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582642638448" />
+    <state width="921" height="177" key="GridCell.Tab.0.center" timestamp="1582642638448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582300634842" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1582300634842">
+    <state width="921" height="177" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582642638448" />
+    <state width="921" height="177" key="GridCell.Tab.0.left" timestamp="1582642638443">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582300634842" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1582300634842">
+    <state width="921" height="177" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582642638443" />
+    <state width="921" height="177" key="GridCell.Tab.0.right" timestamp="1582642638448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582300634842" />
+    <state width="921" height="177" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582642638448" />
     <state x="184" y="7" key="SettingsEditor" timestamp="1582292845868">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582292845868" />
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Raitaru.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -494,4 +526,6 @@
       </state>
     </states>
   </component>
+=======
+>>>>>>> 16431111e2db911d195989226529437b8872043b
 </project>

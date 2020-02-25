@@ -68,26 +68,27 @@ public class GUI implements ActionListener {
     public GUI() throws IOException {
         window = new JFrame("Eve citadels materials");
         window.setVisible(true);
-        window.setSize(500, 950);
+        window.setSize(620, 950);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setResizable(false);
 
-        fortizar_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/fortizar.jpg"));
+        fortizar_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/fortizar.jpg"));
         fortizar_picture = new JLabel(new ImageIcon(fortizar_image));
-        astrahus_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/astrahus.jpg"));
+        astrahus_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/astrahus.jpg"));
         astrahus_picture = new JLabel(new ImageIcon(astrahus_image));
-        keepstar_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/keepstar.jpg"));
+        keepstar_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/keepstar.jpg"));
         keepstar_picture = new JLabel(new ImageIcon(keepstar_image));
-        raitaru_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/raitaru.jpg"));
+        raitaru_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/raitaru.jpg"));
         raitaru_picture = new JLabel(new ImageIcon(raitaru_image));
-        azbel_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/azbel.jpg"));
+        azbel_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/azbel.jpg"));
         azbel_picture = new JLabel(new ImageIcon(azbel_image));
-        sotiyo_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/sotiyo.jpg"));
+        sotiyo_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/sotiyo.jpg"));
         sotiyo_picture = new JLabel(new ImageIcon(sotiyo_image));
-        athanor_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/athanor.jpg"));
+        athanor_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/athanor.jpg"));
         athanor_picture = new JLabel(new ImageIcon(athanor_image));
-        tatara_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/tatara.jpg"));
+        tatara_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/tatara.jpg"));
         tatara_picture = new JLabel(new ImageIcon(tatara_image));
-        palatineKeepstar_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/palatine_keepstar.jpg"));
+        palatineKeepstar_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/palatine_keepstar.jpg"));
         palatine_keepstar_picture = new JLabel(new ImageIcon(palatineKeepstar_image));
         panel = new JPanel();
 
@@ -117,7 +118,7 @@ public class GUI implements ActionListener {
         tatara_button.setPreferredSize(new Dimension(150, 30));
         palatine_keepstar_button = new JButton("Palatine Keepstar");
         palatine_keepstar_button.addActionListener(this);
-        palatine_keepstar_button.setPreferredSize(new Dimension(400, 30));
+        palatine_keepstar_button.setPreferredSize(new Dimension(150, 30));
 
         result_label = new JTextArea("Click on a citadel" + "to see materials" + "\n" +
                 "1. Minerals" + "\n" + "2. P4 products" + "\n" + "3. or P2 products");
