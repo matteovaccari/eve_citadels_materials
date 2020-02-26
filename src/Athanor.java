@@ -1,5 +1,7 @@
 public class Athanor {
 
+    public static double estSellPrice;
+
     public String getMaterials() {
 
         return "Tritanium x 7.650.000" + "\n" + "Pyerite x 1.530.000" + "\n" + "Mexallon x 535.500"
@@ -25,7 +27,11 @@ public class Athanor {
                 + "\n" + "Viral Agent x 1560" + "  Water-Cooled CPU x 1640"
                 + "\n" + "Miniature Electronics x 1560" + "  Water x 1520"
                 + "\n" + "Bacteria x 2000" + "  Reactive Metals x 1640" + "\n"
+<<<<<<< HEAD
                 + " --> Est.Sell Price(Amarr) = " + getP2ESTprice();
+=======
+                + " --> Est.Price(Amarr) = " + getP2ESTprice() + "\n" + "1 x Athanor --> Est.Price = " + getItemESTprice();
+>>>>>>> 22d3c9313f763cab6eb5204ad756ffb08da89450
     }
 
     public int getP4ESTprice() {
@@ -36,8 +42,11 @@ public class Athanor {
         return 0;
     }
 
-    public int getMineralESTprice() {
+    public double getMineralESTprice() {
         return 0;
+    }
+    public double getItemESTprice() {
+        return Math.round(estSellPrice);
     }
 }
 

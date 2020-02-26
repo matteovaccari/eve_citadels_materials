@@ -1,14 +1,19 @@
+import org.json.JSONObject;
+
 import javax.imageio.ImageIO;
+import javax.net.ssl.HttpsURLConnection;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class GUI implements ActionListener {
 
+    //todo : add comments
     JFrame window;
     JPanel panel;
     JTextArea result_label;
@@ -51,6 +56,11 @@ public class GUI implements ActionListener {
     JLabel current_picture;
     String current_picture_name = "empty";
 
+    private static HttpURLConnection con;
+    String url;
+    String urlParameters;
+    URL urlObject;
+
     public static void main(String[] args) throws IOException {
         new GUI();
     }
@@ -62,23 +72,23 @@ public class GUI implements ActionListener {
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false);
 
-        fortizar_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/fortizar.jpg"));
+        fortizar_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/fortizar.jpg"));
         fortizar_picture = new JLabel(new ImageIcon(fortizar_image));
-        astrahus_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/astrahus.jpg"));
+        astrahus_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/astrahus.jpg"));
         astrahus_picture = new JLabel(new ImageIcon(astrahus_image));
-        keepstar_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/keepstar.jpg"));
+        keepstar_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/keepstar.jpg"));
         keepstar_picture = new JLabel(new ImageIcon(keepstar_image));
-        raitaru_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/raitaru.jpg"));
+        raitaru_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/raitaru.jpg"));
         raitaru_picture = new JLabel(new ImageIcon(raitaru_image));
-        azbel_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/azbel.jpg"));
+        azbel_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/azbel.jpg"));
         azbel_picture = new JLabel(new ImageIcon(azbel_image));
-        sotiyo_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/sotiyo.jpg"));
+        sotiyo_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/sotiyo.jpg"));
         sotiyo_picture = new JLabel(new ImageIcon(sotiyo_image));
-        athanor_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/athanor.jpg"));
+        athanor_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/athanor.jpg"));
         athanor_picture = new JLabel(new ImageIcon(athanor_image));
-        tatara_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/tatara.jpg"));
+        tatara_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/tatara.jpg"));
         tatara_picture = new JLabel(new ImageIcon(tatara_image));
-        palatineKeepstar_image = ImageIO.read(new File("D:/Programmes/WorkSpace_2/eve_citadel_materials/images/palatine_keepstar.jpg"));
+        palatineKeepstar_image = ImageIO.read(new File("F:/Programmes/projects/eve_citadels_materials/images/palatine_keepstar.jpg"));
         palatine_keepstar_picture = new JLabel(new ImageIcon(palatineKeepstar_image));
         panel = new JPanel();
 
@@ -138,6 +148,17 @@ public class GUI implements ActionListener {
         athanor = new Athanor();
         tatara = new Tatara();
         palatineKeepstar = new PalatineKeepstar();
+
+        //post request
+        url =  "https://evepraisal.com/appraisal.json";
+        urlObject = new URL(url);
+        con = (HttpsURLConnection) urlObject.openConnection();
+        //Request header
+        con.setRequestMethod("POST");
+        con.setRequestProperty("User-Agent", "Mozilla/5.0");
+
+
+
     }
 
     @Override
@@ -230,6 +251,11 @@ public class GUI implements ActionListener {
                 panel.add(current_picture);
                 current_picture_name = "athanor_image";
             }
+            try {
+                sendAthanorPostRequest();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
             result_label.setText(athanor.getMaterials());
         }
         else if (e.getSource() == tatara_button) {
@@ -258,6 +284,29 @@ public class GUI implements ActionListener {
             }
             result_label.setText(palatineKeepstar.getMaterials());
         }
+    }
+
+    public String getAthanorUrlParameters(){
+        return "market=amarr&raw_textarea=1 x Athanor&persist=no&format=json";
+    }
+
+    public void sendAthanorPostRequest() throws IOException {
+        //Send post request
+        con.setDoOutput(true);
+        DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+        wr.writeBytes(getAthanorUrlParameters());
+        wr.flush();
+        wr.close();
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(con.getInputStream()));
+        String inputLine;
+        StringBuilder response = new StringBuilder();
+        while ((inputLine = in.readLine()) != null) {
+            response.append(inputLine);
+        }
+        in.close();
+        JSONObject jsonObject = new JSONObject(response.toString());
+        Athanor.estSellPrice = jsonObject.getJSONObject("appraisal").getJSONObject("totals").getDouble("sell");
     }
 }
 
