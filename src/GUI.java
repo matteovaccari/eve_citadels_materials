@@ -321,9 +321,30 @@ public class GUI implements ActionListener {
         JSONObject jsonObjectP4 = new JSONObject(responseP4.toString());
         Athanor.estP4SellPrice = jsonObjectP4.getJSONObject("appraisal").getJSONObject("totals").getDouble("sell");
 
+        //Send P4 post request
+        athanorP2Con = (HttpsURLConnection) urlObject.openConnection();
+        athanorP2Con.setRequestMethod("POST");
+        athanorP2Con.setRequestProperty("User-Agent", "Mozilla/5.0");
+        athanorP2Con.setDoOutput(true);
+        DataOutputStream wrP2 = new DataOutputStream(athanorP2Con.getOutputStream());
+        wrP2.writeBytes(getAthanorUrlParameters("P2"));
+        wrP2.flush();
+        wrP2.close();
+        BufferedReader inP2 = new BufferedReader(
+                new InputStreamReader(athanorP2Con.getInputStream()));
+        String inputLineP2;
+        StringBuilder responseP2 = new StringBuilder();
+        while ((inputLineP2 = inP2.readLine()) != null) {
+            responseP2.append(inputLineP2);
+        }
+        inMinerals.close();
+        JSONObject jsonObjectP2 = new JSONObject(responseP2.toString());
+        Athanor.estP2SellPrice = jsonObjectP2.getJSONObject("appraisal").getJSONObject("totals").getDouble("sell");
+
 
         isAthanorRequestAlreadyDone = true;
     }
+
     public void setPictures() throws IOException {
         fortizar_image = ImageIO.read(new File("D:/programmes/WorkSpace_2/eve_citadel_materials/images/fortizar.jpg"));
         fortizar_picture = new JLabel(new ImageIcon(fortizar_image));

@@ -38,7 +38,7 @@ public class Athanor {
                 + "\n" + "Miniature Electronics x 1560" + "  Water x 1520"
                 + "\n" + "Bacteria x 2000" + "  Reactive Metals x 1640" + "\n"
                 + " --> Est.Sell Price(Amarr) = " + getP2ESTprice() + billionUnit
-                + "\n" + "1 x Athanor --> Est.Price = " + getItemESTprice() + billionUnit;
+                + "\n" + " 1 x Athanor --> Est.Price = " + getItemESTprice() + billionUnit;
     }
 
     public String getP4ESTprice() {
