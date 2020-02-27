@@ -61,9 +61,14 @@ public class GUI implements ActionListener {
     private static HttpURLConnection athanorMineralsCon;
     private static HttpURLConnection athanorP4Con;
     private static HttpURLConnection athanorP2Con;
+    private static HttpURLConnection astrahusItemCon;
+    private static HttpURLConnection astrahusMineralsCon;
+    private static HttpURLConnection astrahusP4Con;
+    private static HttpURLConnection astrahusP2Con;
     String url;
     URL urlObject;
     boolean isAthanorRequestAlreadyDone = false;
+    boolean isAstrahusRequestAlreadyDone = false;
 
     public static void main(String[] args) throws IOException {
         new GUI();
@@ -99,6 +104,13 @@ public class GUI implements ActionListener {
                 current_picture = new JLabel(new ImageIcon(astrahus_image));
                 panel.add(current_picture);
                 current_picture_name = "astrahus_image";
+            }
+            if (!isAstrahusRequestAlreadyDone) {
+                try {
+                    sendAstrahusPostRequest();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
             }
             result_label.setText(astrahus.getMaterials());
         } else if (e.getSource() == fortizar_button) {
@@ -259,6 +271,50 @@ public class GUI implements ActionListener {
         return returnValue;
     }
 
+    public String getAstrahusUrlParameters(String type){
+        String returnValue = "";
+        switch (type) {
+            case "minerals":
+                returnValue = "market=amarr&raw_textarea=Tritanium x 8.550.000\n" +
+                        "Pyerite x 1.710.000\n" +
+                        "Mexallon x 598.500\n" +
+                        "Isogen x 68.400\n" +
+                        "Nocxium x 12.825\n" +
+                        "Zydrine x 5.985\n" +
+                        "Megacyte x 2.565&persist=no&format=json";
+                break;
+            case "P2":
+                returnValue = "market=amarr&raw_textarea=Biocells x 2620  Construction Blocks x 2560\n" +
+                        "Consumer Electronics x 2180  Coolant x 2180\n" +
+                        "Enriched Uranium x 760  Fertilizer x 2160\n" +
+                        "Genetically Enhanced Livestock x 760  Livestock x 2560\n" +
+                        "Mechanical Parts x 1500\n" +
+                        "Nanites x 1840  Microfiber Shielding x 2220\n" +
+                        "Oxides x 1500  Polyaramids x 2220\n" +
+                        "Polytextiles x 1480  Rocket Fuel x 760\n" +
+                        "Silicate Glass x 2220  Superconductors x 1480\n" +
+                        "Supertensile Plastics x 2620  Synthetic Oil x 2160\n" +
+                        "Test Cultures x 1840  Transmitter x 2620\n" +
+                        "Viral Agent x 1880  Water-Cooled CPU x 1840\n" +
+                        "Miniature Electronics x 1880  Water x 2960\n" +
+                        "Bacteria x 2200  Reactive Metals x 2160&persist=no&format=json";
+                break;
+            case "P4":
+                returnValue = "market=amarr&raw_textarea=Integrity Response Drones x 20\n" +
+                        "Nano-Factory x 54\n" +
+                        "Organic Mortar Applicators x 55\n" +
+                        "Recursive Computing Module x 38\n" +
+                        "Self-Harmonizing Power Core x 38 \n" +
+                        "Sterile Conduits x 74\n" +
+                        "Wetware Mainframe x 54&persist=no&format=json";
+                break;
+            case "item":
+                returnValue = "market=amarr&raw_textarea=1 x Astrahus&persist=no&format=json";
+                break;
+        }
+        return returnValue;
+    }
+
     public void sendAthanorPostRequest() throws IOException {
         //Send Item post request
         athanorItemCon = (HttpsURLConnection) urlObject.openConnection();
@@ -321,7 +377,7 @@ public class GUI implements ActionListener {
         JSONObject jsonObjectP4 = new JSONObject(responseP4.toString());
         Athanor.estP4SellPrice = jsonObjectP4.getJSONObject("appraisal").getJSONObject("totals").getDouble("sell");
 
-        //Send P4 post request
+        //Send P2 post request
         athanorP2Con = (HttpsURLConnection) urlObject.openConnection();
         athanorP2Con.setRequestMethod("POST");
         athanorP2Con.setRequestProperty("User-Agent", "Mozilla/5.0");
@@ -343,6 +399,92 @@ public class GUI implements ActionListener {
 
 
         isAthanorRequestAlreadyDone = true;
+    }
+
+    public void sendAstrahusPostRequest() throws  IOException {
+        //Send Item post request
+        astrahusItemCon = (HttpsURLConnection) urlObject.openConnection();
+        astrahusItemCon.setRequestMethod("POST");
+        astrahusItemCon.setRequestProperty("User-Agent", "Mozilla/5.0");
+        astrahusItemCon.setDoOutput(true);
+
+        DataOutputStream wrItem2 = new DataOutputStream(astrahusItemCon.getOutputStream());
+        wrItem2.writeBytes(getAstrahusUrlParameters("item"));
+        wrItem2.flush();
+        wrItem2.close();
+        BufferedReader inItem2 = new BufferedReader(
+                new InputStreamReader(astrahusItemCon.getInputStream()));
+        String inputLineItem2;
+        StringBuilder responseItem2 = new StringBuilder();
+        while ((inputLineItem2 = inItem2.readLine()) != null) {
+            responseItem2.append(inputLineItem2);
+        }
+        inItem2.close();
+        JSONObject jsonObjectItem2 = new JSONObject(responseItem2.toString());
+        Astrahus.estSellPrice = jsonObjectItem2.getJSONObject("appraisal").getJSONObject("totals").getDouble("sell");
+
+        //Send minerals post request
+        astrahusMineralsCon = (HttpsURLConnection) urlObject.openConnection();
+        astrahusMineralsCon.setRequestMethod("POST");
+        astrahusMineralsCon.setRequestProperty("User-Agent", "Mozilla/5.0");
+        astrahusMineralsCon.setDoOutput(true);
+        DataOutputStream wrMinerals2 = new DataOutputStream(astrahusMineralsCon.getOutputStream());
+        wrMinerals2.writeBytes(getAstrahusUrlParameters("minerals"));
+        wrMinerals2.flush();
+        wrMinerals2.close();
+        BufferedReader inMinerals2 = new BufferedReader(
+                new InputStreamReader(astrahusMineralsCon.getInputStream()));
+        String inputLineMinerals2;
+        StringBuilder responseMinerals2 = new StringBuilder();
+        while ((inputLineMinerals2 = inMinerals2.readLine()) != null) {
+            responseMinerals2.append(inputLineMinerals2);
+        }
+        inMinerals2.close();
+        JSONObject jsonObjectMinerals2 = new JSONObject(responseMinerals2.toString());
+        Astrahus.estMineralsSellPrice = jsonObjectMinerals2.getJSONObject("appraisal").getJSONObject("totals").getDouble("sell");
+
+        //Send P4 post request
+        astrahusP4Con = (HttpsURLConnection) urlObject.openConnection();
+        astrahusP4Con.setRequestMethod("POST");
+        astrahusP4Con.setRequestProperty("User-Agent", "Mozilla/5.0");
+        astrahusP4Con.setDoOutput(true);
+        DataOutputStream wrP42 = new DataOutputStream(astrahusP4Con.getOutputStream());
+        wrP42.writeBytes(getAstrahusUrlParameters("P4"));
+        wrP42.flush();
+        wrP42.close();
+        BufferedReader inP42 = new BufferedReader(
+                new InputStreamReader(astrahusP4Con.getInputStream()));
+        String inputLineP42;
+        StringBuilder responseP42 = new StringBuilder();
+        while ((inputLineP42 = inP42.readLine()) != null) {
+            responseP42.append(inputLineP42);
+        }
+        inMinerals2.close();
+        JSONObject jsonObjectP42 = new JSONObject(responseP42.toString());
+        Astrahus.estP4SellPrice = jsonObjectP42.getJSONObject("appraisal").getJSONObject("totals").getDouble("sell");
+
+        //Send P2 post request
+        astrahusP2Con = (HttpsURLConnection) urlObject.openConnection();
+        astrahusP2Con.setRequestMethod("POST");
+        astrahusP2Con.setRequestProperty("User-Agent", "Mozilla/5.0");
+        astrahusP2Con.setDoOutput(true);
+        DataOutputStream wrP22 = new DataOutputStream(astrahusP2Con.getOutputStream());
+        wrP22.writeBytes(getAstrahusUrlParameters("P2"));
+        wrP22.flush();
+        wrP22.close();
+        BufferedReader inP22 = new BufferedReader(
+                new InputStreamReader(astrahusP2Con.getInputStream()));
+        String inputLineP22;
+        StringBuilder responseP22 = new StringBuilder();
+        while ((inputLineP22 = inP22.readLine()) != null) {
+            responseP22.append(inputLineP22);
+        }
+        inMinerals2.close();
+        JSONObject jsonObjectP22 = new JSONObject(responseP22.toString());
+        Astrahus.estP2SellPrice = jsonObjectP22.getJSONObject("appraisal").getJSONObject("totals").getDouble("sell");
+
+
+        isAstrahusRequestAlreadyDone = true;
     }
 
     public void setPictures() throws IOException {
