@@ -59,8 +59,9 @@ public class GUI implements ActionListener {
 
     private static HttpURLConnection athanorItemCon;
     private static HttpURLConnection athanorMineralsCon;
+    private static HttpURLConnection athanorP4Con;
+    private static HttpURLConnection athanorP2Con;
     String url;
-    String urlParameters;
     URL urlObject;
     boolean isAthanorRequestAlreadyDone = false;
 
@@ -79,6 +80,7 @@ public class GUI implements ActionListener {
 
         window.add(panel);
         window.validate();
+
         instanciateCitadels();
 
         setBaseUrl();
@@ -279,7 +281,7 @@ public class GUI implements ActionListener {
         JSONObject jsonObjectItem = new JSONObject(responseItem.toString());
         Athanor.estSellPrice = jsonObjectItem.getJSONObject("appraisal").getJSONObject("totals").getDouble("sell");
 
-        //Send P2 materials post request
+        //Send minerals post request
         athanorMineralsCon = (HttpsURLConnection) urlObject.openConnection();
         athanorMineralsCon.setRequestMethod("POST");
         athanorMineralsCon.setRequestProperty("User-Agent", "Mozilla/5.0");
@@ -299,6 +301,25 @@ public class GUI implements ActionListener {
         JSONObject jsonObjectMinerals = new JSONObject(responseMinerals.toString());
         Athanor.estMineralsSellPrice = jsonObjectMinerals.getJSONObject("appraisal").getJSONObject("totals").getDouble("sell");
 
+        //Send P4 post request
+        athanorP4Con = (HttpsURLConnection) urlObject.openConnection();
+        athanorP4Con.setRequestMethod("POST");
+        athanorP4Con.setRequestProperty("User-Agent", "Mozilla/5.0");
+        athanorP4Con.setDoOutput(true);
+        DataOutputStream wrP4 = new DataOutputStream(athanorP4Con.getOutputStream());
+        wrP4.writeBytes(getAthanorUrlParameters("P4"));
+        wrP4.flush();
+        wrP4.close();
+        BufferedReader inP4 = new BufferedReader(
+                new InputStreamReader(athanorP4Con.getInputStream()));
+        String inputLineP4;
+        StringBuilder responseP4 = new StringBuilder();
+        while ((inputLineP4 = inP4.readLine()) != null) {
+            responseP4.append(inputLineP4);
+        }
+        inMinerals.close();
+        JSONObject jsonObjectP4 = new JSONObject(responseP4.toString());
+        Athanor.estP4SellPrice = jsonObjectP4.getJSONObject("appraisal").getJSONObject("totals").getDouble("sell");
 
 
         isAthanorRequestAlreadyDone = true;
