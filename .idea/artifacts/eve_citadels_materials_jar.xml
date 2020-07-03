@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="eve_citadels_materials:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/eve_citadels_materials_jar</output-path>
+    <root id="archive" name="eve_citadels_materials.jar">
+      <element id="module-output" name="eve_citadels_materials" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/json/json/20190722/json-20190722.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
